@@ -1,0 +1,40 @@
+________________===== Composer Install Package =====________________
+// install laravel10
+composer create-project laravel/laravel Laravel10
+
+// install laravel/ui 
+composer require laravel/ui
+
+// install laravel/breeze
+composer require laravel/breeze
+
+________________===== Menerapkan package ke Laravel =====_____________
+
+// laravel install ui
+- php artisan ui bootstrap
+- php artisan ui bootstrap --auth
+
+// install ui vue
+php artisan ui vue
+
+_________________===== php artisan =====__________________
+// Code php artisan 
+php artisan serve           | Menjalankan laraveable
+php artisan make:migrate    | Menyimpan data tabel
+
+// Code php artisan 
+php artisan make:controller ContohController    | Membuat file controller dengan nama ContohController
+php artisan make:migration create_contoh_table  | Membuat tabel mysql dengan nama contoh
+php artisan make:model ContohModel              | Membuat file model dengan nama ContohModel
+
+
+________________===== npm instal =====_____________
+// install npm dan cara run
+- npm install   | Untuk menginstall npm
+- npm run dev   | Menjalankan npm
+
+// install vue dengan versi terbaru dan vue-loader terbaru
+npm install vue@next vue-loader@next
+
+// install vite
+npm install --save-dev @vitejs/plugin-vue
