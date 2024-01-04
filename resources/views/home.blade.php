@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -15,8 +15,7 @@
                     @endif
 
                     {{-- {{ __('You are logged in!') }} --}}
-                    <percobaan-pertama></percobaan-pertama>
-                    <example-component></example-component>
+                    <div id="app"></div>
                 </div>
             </div>
         </div>

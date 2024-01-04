@@ -6,8 +6,14 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
-import IndexComponent from './components/IndexComponent.vue';
-import ExampleComponent from './components/ExampleComponent.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import VueAxios from 'vue-axios';
+
+// Import components
+import App from './layouts/App.vue';
+import ProductList from './components/Edit.vue';
+import ProductForm from './components/Create.vue';
+import Product from './components/Product.vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -15,9 +21,19 @@ import ExampleComponent from './components/ExampleComponent.vue';
  * to use in your application's views. An example is included for you.
  */
 
-const app = createApp({});
-app.component('percobaan-pertama', IndexComponent);
-app.component('example-component', ExampleComponent);
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        { path: '/home', component: ProductList },
+        { path: '/products/create', component: ProductForm },
+        { path: '/products/:id', component: Product },
+        { path: '/products/:id/edit', component: ProductForm },
+    ]
+});
+
+const app = createApp(App);
+app.use(router);
+app.use(VueAxios);
 
 /**
  * The following block of code may be used to automatically register your

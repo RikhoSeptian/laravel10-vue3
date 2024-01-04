@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Teruntuk kamu :</div>
+                    <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                    {{ message }}
+                        I'm an example component.
                     </div>
                 </div>
             </div>
@@ -16,15 +16,8 @@
 
 <script>
     export default {
-        data() {
-            return {
-                message: 'Cuma Mau Bilang Sok Semangat🎉🎉🎉'
-            };
-        },
-        props() {
-            nama: string
-            description: string
-            stoc: number
-        },
-    };
+        mounted() {
+            console.log('Component mounted.')
+        }
+    }
 </script>
